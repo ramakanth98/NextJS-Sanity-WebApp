@@ -11,7 +11,7 @@ export default async function Project({ params }: Props){
     const slug = params.project;
     const project = await getProject(slug);
 
-    return <div className="max-w-3xl mx-auto py-20">
+    return <div>
         <header className="flex items-centered justify-between">
             <h1 className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 
             bg-clip-text text-transparent text-5xl drop-shadow font-extrabold">
@@ -34,10 +34,8 @@ export default async function Project({ params }: Props){
         </div>
 
         {/* Image  */}
-        <Image
-         src={project.image} alt={project.name} width={1920} height={1080} className="mt-10 border-2 border-gray-700 object-cover rounded-xl"
-         
-        >
+        <Image src={project.image} alt={project.name} width={750} height={300}
+        className="mt-10 border-2 border-gray-700 object-cover rounded-xl">
         </Image> 
 
         </div>;
